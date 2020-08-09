@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import VectorSVGback from '../components/svg/VectorSVGback';
 import {TouchableOpacity, ScrollView} from 'react-native-gesture-handler';
-
 import OrdinaryDrink from '../components/list/OrdinaryDrink';
-
 import Cocktail from '../components/list/Cocktail';
 import Milk from '../components/list/Milk';
 import Other from '../components/list/Other';
@@ -16,6 +14,7 @@ import Punch from '../components/list/Punch';
 import Beer from '../components/list/Beer';
 import Soda from '../components/list/Soda';
 export default function Filters({navigation}) {
+  // change state category state
   return (
     <View>
       <View style={styles.containerStyle}>
@@ -37,8 +36,11 @@ export default function Filters({navigation}) {
         <Shot />
         <Coffee />
         <Liqueur />
-        <Punch />
         <Beer />
+        <View style={styles.button}>
+          <Button title="APPLY" color="white" />
+        </View>
+        <Punch />
         <Soda />
       </ScrollView>
     </View>
@@ -49,7 +51,6 @@ const styles = StyleSheet.create({
     height: 70,
     display: 'flex',
     flexDirection: 'row',
-
     paddingLeft: 30,
     paddingTop: 20,
     paddingBottom: 21,
@@ -73,5 +74,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  button: {
+    backgroundColor: 'black',
+    marginBottom: 20,
+    padding: 8.5,
   },
 });

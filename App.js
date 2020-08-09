@@ -1,14 +1,14 @@
-// import 'react-native-gesture-handler';
+import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import store from './app/store';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Drinks from './pages/Drinks.js';
 import Filters from './pages/Filters.js';
+
+//redux provider and navigation
+
 const Stack = createStackNavigator();
 const App = () => {
   return (
@@ -33,11 +33,5 @@ const App = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-});
 
 export default App;

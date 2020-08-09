@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectPunch, punchfalse, punchtrue} from '../../features/contentSlice';
 
 export default function Punch() {
+  // switch state for punch
   const punch = useSelector(selectPunch);
   const dispatch = useDispatch();
   const onPressHandler = () => {

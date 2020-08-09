@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
 
-export default function Cocktail({image, name, id, info, glass}) {
+export default function Cocktail({image, name}) {
+  // show image and name coctail
   return (
     <View style={styles.container}>
       <View>

@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectSoda, sodafalse, sodatrue} from '../../features/contentSlice';
 
 export default function Cocktail() {
+  // switch state for soda
   const soda = useSelector(selectSoda);
   const dispatch = useDispatch();
   const onPressHandler = () => {

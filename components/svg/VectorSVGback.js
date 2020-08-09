@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
 export default function VectorSVGback() {
+  // arrow back
   return (
     <View>
       <Svg

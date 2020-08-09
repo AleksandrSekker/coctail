@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectMilk, milkfalse, milktrue} from '../../features/contentSlice';
 
 export default function Milk() {
+  // switch state for milk
   const milk = useSelector(selectMilk);
   const dispatch = useDispatch();
   const onPressHandler = () => {

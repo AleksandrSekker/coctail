@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectCocoa, cocoafalse, cocoatrue} from '../../features/contentSlice';
 
 export default function Cocoa() {
+  // switch state for cocoa
   const cocoa = useSelector(selectCocoa);
   const dispatch = useDispatch();
   const onPressHandler = () => {

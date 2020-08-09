@@ -2,7 +2,7 @@ import React from 'react';
 import Cocktail from './Cocktail';
 import {View, Text} from 'react-native';
 
-export default function CocktailList({cocktails, loading}) {
+export default function CocktailList({cocktails}) {
   return (
     <View>
       <View>

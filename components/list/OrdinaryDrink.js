@@ -10,6 +10,7 @@ import {
 } from '../../features/contentSlice';
 
 export default function OrdinaryDrink() {
+  // switch state for ordinary drink
   const ordinaryDrink = useSelector(selectOrdinary);
   const dispatch = useDispatch();
   const onPressHandler = () => {

@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectOther, otherfalse, othertrue} from '../../features/contentSlice';
 
 export default function Other() {
+  // switch state for other
   const other = useSelector(selectOther);
   const dispatch = useDispatch();
   const onPressHandler = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import VectorSVG from '../components/svg/VectorSVG';
 import {TouchableOpacity, ScrollView} from 'react-native-gesture-handler';
 import DrinkContent from '../components/content/OrdinaryDrinkContent';
@@ -19,6 +19,9 @@ import {
 } from '../features/contentSlice';
 
 export default function Drinks({navigation}) {
+  // get diffferent coctails state from redux
+  // true or false, default true
+  // if true show category name and content
   const ordinaryDrink = useSelector(selectOrdinary);
   const cocktails = useSelector(selectCocktails);
   const milk = useSelector(selectMilk);
@@ -31,12 +34,14 @@ export default function Drinks({navigation}) {
   const beer = useSelector(selectBeer);
   const soda = useSelector(selectSoda);
   return (
-    <ScrollView style={styles.containerStyle}>
-      <View style={styles.header}>
-        <Text style={styles.text}>Drinks</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Filters')}>
-          <VectorSVG />
-        </TouchableOpacity>
+    <ScrollView>
+      <View style={styles.containerStyle}>
+        <View style={styles.header}>
+          <Text style={styles.text}>Drinks</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Filters')}>
+            <VectorSVG />
+          </TouchableOpacity>
+        </View>
       </View>
       {ordinaryDrink === true ? (
         <>
@@ -129,6 +134,7 @@ const styles = StyleSheet.create({
     lineHeight: 28,
   },
   categoryText: {
+    marginTop: 20,
     marginLeft: 20,
     fontSize: 14,
     color: '#7E7E7E',

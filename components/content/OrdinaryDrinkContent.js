@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import CocktailsList from './CocktailList';
-import axios from 'axios';
+
 export default function DrinkContent({category}) {
   //Loading state
   const [loading, setLoading] = React.useState(false);
@@ -13,6 +13,7 @@ export default function DrinkContent({category}) {
   React.useEffect(() => {
     setLoading(true);
     async function getDrinks() {
+      // fetching data from api and use try catch for catching error
       try {
         const response = await fetch(
           `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`,
@@ -21,19 +22,11 @@ export default function DrinkContent({category}) {
         const {drinks} = data;
         if (drinks) {
           const newCocktails = drinks.map((item) => {
-            const {
-              idDrink,
-              strDrink,
-              strDrinkThumb,
-              // strAlcoholic,
-              // strGlass,
-            } = item;
+            const {idDrink, strDrink, strDrinkThumb} = item;
             return {
               id: idDrink,
               name: strDrink,
               image: strDrinkThumb,
-              // info: strAlcoholic,
-              // glass: strGlass,
             };
           });
           setCocktails(newCocktails);

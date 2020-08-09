@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectShot, shotfalse, shottrue} from '../../features/contentSlice';
 
 export default function Shot() {
+  // switch state for shot
   const shot = useSelector(selectShot);
   const dispatch = useDispatch();
   const onPressHandler = () => {

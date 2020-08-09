@@ -9,7 +9,8 @@ import {
   coffeetrue,
 } from '../../features/contentSlice';
 
-export default function Milk() {
+export default function Coffee() {
+  // switch state for coffee
   const coffee = useSelector(selectCoffee);
   const dispatch = useDispatch();
   const onPressHandler = () => {

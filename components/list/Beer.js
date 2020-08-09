@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {selectBeer, beerfalse, beertrue} from '../../features/contentSlice';
 
 export default function Beer() {
+  // switch state for beer
   const beer = useSelector(selectBeer);
   const dispatch = useDispatch();
   const onPressHandler = () => {

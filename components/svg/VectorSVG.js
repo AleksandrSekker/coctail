@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 
 export default function VectorSVG() {
+  // mark for moving to second string
   return (
     <View>
       <Svg

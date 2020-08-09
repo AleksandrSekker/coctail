@@ -10,6 +10,7 @@ import {
 } from '../../features/contentSlice';
 
 export default function Liqueur() {
+  // switch state for liqueur
   const liqueur = useSelector(selectLiqueur);
   const dispatch = useDispatch();
   const onPressHandler = () => {

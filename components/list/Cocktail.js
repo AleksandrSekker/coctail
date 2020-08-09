@@ -10,6 +10,7 @@ import {
 } from '../../features/contentSlice';
 
 export default function Cocktail() {
+  // switch state for coctail
   const cocktails = useSelector(selectCocktails);
   const dispatch = useDispatch();
   const onPressHandler = () => {
